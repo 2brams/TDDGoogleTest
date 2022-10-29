@@ -25,9 +25,11 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(googletest)
 
-add_executable(${PROJECT_NAME} example.cpp)
+add_executable(${PROJECT_NAME} src/dummy.cpp test/testDummy.cpp)
 
 target_link_libraries(${PROJECT_NAME} gtest_main gmock_main)
 
 include(GoogleTest)
 gtest_discover_tests(${PROJECT_NAME})
+
+include_directories(include)
