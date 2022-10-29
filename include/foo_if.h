@@ -10,6 +10,7 @@ public:
     ~fooIf() {}
 
     virtual int fooInt(const std::string &str) = 0;
+    virtual void fooStr(std::string &str) = 0;
 };
 
 

@@ -33,3 +33,12 @@ TEST_F(testFixtureDummy, dummyInt)
     int result = mTestDummy->dummyInt(str);
     ASSERT_EQ(result, str.size());
 }
+
+TEST_F(testFixtureDummy, dummyStr)
+{
+    std::string str {"tata"};
+    std::string resultStr {"exampleStr"};
+    EXPECT_CALL(mFoo, fooStr(testing::_)).WillOnce(testing::SetArgReferee<0>(resultStr));
+    mTestDummy->dummyStr(str);
+    ASSERT_EQ(str, resultStr);
+}

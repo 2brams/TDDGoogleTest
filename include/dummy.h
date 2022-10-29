@@ -13,6 +13,7 @@ public:
     ~dummy() {}
 
     int dummyInt(const std::string& str);
+    void dummyStr(std::string& str);
     fooIf& mFoo;
 };
 

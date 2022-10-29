@@ -10,6 +10,7 @@ public:
     ~foo() {}
 
     int fooInt(const std::string &str);
+    void fooStr(std::string &str);
 };
 
 #endif
