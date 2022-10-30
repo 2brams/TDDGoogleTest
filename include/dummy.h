@@ -14,6 +14,8 @@ public:
 
     int dummyInt(const std::string& str);
     void dummyStr(std::string& str);
+    void dummyThrow();
+    void dummycallbackMethod(std::function<void(void)> callback);
     fooIf& mFoo;
 };
 
